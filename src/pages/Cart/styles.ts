@@ -22,8 +22,13 @@ export const Container = styled.div`
       text-transform: uppercase;
       transition: background 0.2s;
 
-      &:hover {
+      &:not(:disabled):hover {
         background: ${darken(0.06, '#7159c1')};
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
       }
     }
   }
